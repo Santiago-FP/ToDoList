@@ -61,9 +61,10 @@ const selectIncomplete = () => {
     setComplete(tasks.filter(task => task.completed === true));
   };
   //useEffect
+  
   useEffect(()=>{
     getTasks();
-    
+  // eslint-disable-next-line
   },[]);
   //render all tasks
   if(selection==="All"){
@@ -86,7 +87,8 @@ const selectIncomplete = () => {
       );
     
   }else if (selection==="Incomplete"){
-    return(
+    
+      return(
       <>
         <Header selectAll={selectAll} selectIncomplete={selectIncomplete} selectComplete={selectComplete} />
         
@@ -94,6 +96,7 @@ const selectIncomplete = () => {
         
         </>
     );
-  };
+    
+  }
 };
 export default App;
